@@ -6,10 +6,10 @@ using UniRx;
 
 namespace Play
 {
-    public class PlayUIController : SimpleUIController<PlayTouchInfomation>
+    public class PlayUIController : SimpleUIController<TouchInfomation>
     {
-        private Subject<PlayTouchInfomation> touch_notice = new Subject<PlayTouchInfomation>();
-        public Subject<PlayTouchInfomation> MenuUINotice
+        private Subject<TouchInfomation> touch_notice = new Subject<TouchInfomation>();
+        public Subject<TouchInfomation> MenuUINotice
         {
             get
             {
@@ -26,7 +26,7 @@ namespace Play
         {
         }
 
-        protected override void touch_reaction(PlayTouchInfomation _pointer_data)
+        protected override void touch_reaction(TouchInfomation _pointer_data)
         {
             if (null != _pointer_data)
             {

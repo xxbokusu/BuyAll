@@ -12,13 +12,6 @@ using DG.Tweening;
 
 namespace Result
 {
-    public enum TouchedOption
-    {
-        Menu,
-        Ranking,
-        None,
-    }
-
     public class ResultManager : MonoBehaviour
     {
         private TouchedOption prev_push_opt;

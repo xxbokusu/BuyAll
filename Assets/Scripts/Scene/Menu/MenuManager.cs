@@ -9,13 +9,6 @@ using UnityEngine.SceneManagement;
 
 namespace Menu
 {
-    public enum TouchedOption
-    {
-        None,
-        GameStart,
-        Ranking,
-    }
-
     public class MenuManager : MonoBehaviour
     {
         private TouchedOption prev_push_menu_type;
@@ -45,7 +38,6 @@ namespace Menu
                 })
                 .AddTo(this);
             finish();
-
             title_unit.CollisionNotice.Subscribe((scene) =>
             {
                 change_scene(scene);

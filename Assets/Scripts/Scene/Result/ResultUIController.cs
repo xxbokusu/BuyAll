@@ -6,10 +6,10 @@ using UniRx;
 
 namespace Result
 {
-    public class ResultUIController : SimpleUIController<ResultTouchInfomation>
+    public class ResultUIController : SimpleUIController<TouchInfomation>
     {
-        private Subject<ResultTouchInfomation> touch_notice = new Subject<ResultTouchInfomation>();
-        public Subject<ResultTouchInfomation> ReultUINotice
+        private Subject<TouchInfomation> touch_notice = new Subject<TouchInfomation>();
+        public Subject<TouchInfomation> ReultUINotice
         {
             get
             {
@@ -26,7 +26,7 @@ namespace Result
         {
         }
 
-        protected override void touch_reaction(ResultTouchInfomation _pointer_data)
+        protected override void touch_reaction(TouchInfomation _pointer_data)
         {
             if (null != _pointer_data)
             {

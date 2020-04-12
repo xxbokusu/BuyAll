@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Menu;
 
-public class MenuSimpleTouch : SimpleTouch<MenuTouchInfomation>
+public class MenuSimpleTouch : SimpleTouch<TouchInfomation>
 {
     [SerializeField]
     private TouchedOption opt = TouchedOption.None;
@@ -23,9 +23,9 @@ public class MenuSimpleTouch : SimpleTouch<MenuTouchInfomation>
     {
     }
 
-    protected override MenuTouchInfomation createdData(PointerEventData _event_data)
+    protected override TouchInfomation createdData(PointerEventData _event_data)
     {
-        MenuTouchInfomation _info = new MenuTouchInfomation()
+        TouchInfomation _info = new TouchInfomation()
         {
             Opt = opt,
             PointerData = _event_data

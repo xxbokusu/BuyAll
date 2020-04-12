@@ -12,11 +12,11 @@ namespace Menu
         [SerializeField] private MenuUIController menu_ui = null;
         [SerializeField] Camera ui_camra;
 
-        private Subject<MenuTouchInfomation> notice = new Subject<MenuTouchInfomation>();
+        private Subject<TouchInfomation> notice = new Subject<TouchInfomation>();
 
         private TouchedOption tmp_touch_opt;
         /// <summary>タッチが来た時の通知</summary>
-        public Subject<MenuTouchInfomation> TouchNotice
+        public Subject<TouchInfomation> TouchNotice
         {
             get
             {
@@ -37,7 +37,7 @@ namespace Menu
         {
         }
 
-        private void menu_ui_notice(MenuTouchInfomation _infomation)
+        private void menu_ui_notice(TouchInfomation _infomation)
         {
             notice.OnNext(_infomation);
         }

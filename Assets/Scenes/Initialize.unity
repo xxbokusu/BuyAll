@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu_ui: {fileID: 294091088}
-  ui_camra: {fileID: 0}
+  ui_camra: {fileID: 1226921105}
 --- !u!114 &469336044
 MonoBehaviour:
   m_ObjectHideFlags: 0

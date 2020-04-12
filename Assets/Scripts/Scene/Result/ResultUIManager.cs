@@ -12,11 +12,11 @@ namespace Result
         [SerializeField] private ResultUIController ui_controller = null;
         [SerializeField] Camera ui_camra;
 
-        private Subject<ResultTouchInfomation> notice = new Subject<ResultTouchInfomation>();
+        private Subject<TouchInfomation> notice = new Subject<TouchInfomation>();
 
         private TouchedOption tmp_touch_opt;
         /// <summary>タッチが来た時の通知</summary>
-        public Subject<ResultTouchInfomation> TouchNotice
+        public Subject<TouchInfomation> TouchNotice
         {
             get
             {
@@ -36,7 +36,7 @@ namespace Result
         {
         }
 
-        private void ui_touch_notice(ResultTouchInfomation _infomation)
+        private void ui_touch_notice(TouchInfomation _infomation)
         {
             notice.OnNext(_infomation);
         }

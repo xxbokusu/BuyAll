@@ -12,8 +12,8 @@ namespace Play
         [SerializeField] private PlayUIController menu_ui = null;
         [SerializeField] Camera ui_camra;
 
-        private Subject<PlayTouchInfomation> notice = new Subject<PlayTouchInfomation>();
-        public Subject<PlayTouchInfomation> TouchNotice
+        private Subject<TouchInfomation> notice = new Subject<TouchInfomation>();
+        public Subject<TouchInfomation> TouchNotice
         {
             get
             {
@@ -32,7 +32,7 @@ namespace Play
         {
         }
 
-        private void menu_ui_notice(PlayTouchInfomation _infomation)
+        private void menu_ui_notice(TouchInfomation _infomation)
         {
             notice.OnNext(_infomation);
         }
