@@ -16,11 +16,6 @@ namespace Play
         Play,
         NextScene,
     }
-    public enum TouchedOption
-    {
-        Result,
-        None,
-    }
 
     public class PlayManager : MonoBehaviour
     {

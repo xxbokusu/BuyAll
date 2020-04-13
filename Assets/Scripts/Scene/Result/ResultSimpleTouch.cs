@@ -6,7 +6,7 @@ using UnityEngine;
 using Result;
 using UnityEngine.EventSystems;
 
-public class ResultSimpleTouch : SimpleTouch<ResultTouchInfomation>
+public class ResultSimpleTouch : SimpleTouch<TouchInfomation>
 {
     [SerializeField]
     private TouchedOption opt = TouchedOption.None;
@@ -23,9 +23,9 @@ public class ResultSimpleTouch : SimpleTouch<ResultTouchInfomation>
     {
     }
 
-    protected override ResultTouchInfomation createdData(PointerEventData _event_data)
+    protected override TouchInfomation createdData(PointerEventData _event_data)
     {
-        ResultTouchInfomation _info = new ResultTouchInfomation()
+        TouchInfomation _info = new TouchInfomation()
         {
             Opt = opt,
             PointerData = _event_data
